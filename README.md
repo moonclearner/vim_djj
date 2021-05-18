@@ -7,13 +7,8 @@
 
 ## manual
 
-
 ### snipt
 use c-a to complete snipt
-
-
-
-
 
 ## ctrl-p
 - Run :CtrlP or :CtrlP [starting-directory] to invoke CtrlP in find file mode.
@@ -28,6 +23,5 @@ use c-a to complete snipt
 ```
 vim $(fzf)
 ```
-
-
-
+## ack and ripgrep
+let ack support ripgrep

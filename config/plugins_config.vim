@@ -18,29 +18,15 @@ nmap <F7> :NERDTreeToggle<CR>
 let g:airline#extensions#tabline#formatter = 'default'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Syntastic
+" => Ale
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '►'
+let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
 
-"设置error和warning的标志
-let g:syntastic_enable_signs = 1
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='►'
-
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-"高亮错误
-let g:syntastic_enable_highlighting=1
-"python
-let g:syntastic_python_checkers = ['pyflakes']
-"c++
-let g:syntastic_cpp_checkers = ['gcc']
-let g:syntastic_cpp_compiler = 'gcc'
-let g:syntastic_cpp_compiler_options = '-std=c++11'
+"vue 
+let g:ale_linter_aliases = {'vue': ['vue', 'javascript']}
+let g:ale_linters = {'vue': ['eslint', 'vls']}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => UltiSnips
@@ -62,3 +48,32 @@ let g:UltiSnipsEditSplit="vertical"
 " => TagBar
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <F8> :TagbarToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ACK
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use ripgrep for searching ⚡️
+" Options include:
+" --vimgrep -> Needed to parse the rg response properly for ack.vim
+" --type-not sql -> Avoid huge sql file dumps as it slows down the search
+" --smart-case -> Search case insensitive if all lowercase pattern, Search case sensitively otherwise
+nnoremap <leader>/ :Ack!<Space>
+nnoremap <F6> :Ack!<Space>-i<Space>
+
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep --type-not sql --smart-case'
+endif
+
+" highlight keyword
+let g:ackhighlight = 1
+
+" Auto close the Quickfix list after pressing '<enter>' on a list item
+let g:ack_autoclose = 1
+
+" Any empty ack search will search for the work the cursor is on
+let g:ack_use_cword_for_empty_search = 1
+
+" Navigate quickfix list with ease
+nnoremap <silent> [q :cprevious<CR>
+nnoremap <silent> ]q :cnext<CR>
+
