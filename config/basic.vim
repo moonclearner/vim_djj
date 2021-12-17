@@ -319,6 +319,18 @@ map <leader>x :e ~/buffer.md<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => CTAGS
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set tags=./.tags;,.tags
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => cursorcolumn  cursorline  highlight
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set cursorcolumn
+set cursorline
+highlight CursorLine   cterm=NONE ctermbg=241 ctermfg=none guibg=NONE guifg=NONE
+highlight CursorColumn cterm=NONE ctermbg=241 ctermfg=none guibg=NONE guifg=NONE
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
