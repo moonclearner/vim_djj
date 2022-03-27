@@ -1,17 +1,14 @@
 call plug#begin('~/.vim/plugged')
      Plug 'preservim/nerdtree'
-     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-     Plug 'junegunn/fzf'
+     " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
      Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
      Plug 'vim-airline/vim-airline'
      Plug 'vim-airline/vim-airline-themes'
      Plug 'tpope/vim-surround'
-     Plug 'mileszs/ack.vim'
+     Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
      " completion
-     Plug 'SirVer/ultisnips'
      Plug 'honza/vim-snippets'
-     Plug 'valloric/youcompleteme'
-     Plug 'ludovicchabant/vim-gutentags'
+     Plug 'neoclide/coc.nvim', {'branch': 'release'}
      " languages syntax
      Plug 'dense-analysis/ale'
      Plug 'posva/vim-vue'

@@ -1,0 +1,28 @@
+{
+  "languageserver": {
+    "intelephense": {
+      "command": "intelephense",
+      "args": ["--stdio"],
+      "filetypes": ["php"],
+      "initializationOptions": {
+        "storagePath": "/tmp/intelephense"
+      }
+    },
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+      "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
+    }
+  },
+  "markdownlint.config": {
+    "default": true,
+    "line_length": false
+  },
+  "vetur.ignoreProjectWarning": true,
+  "coc.source.emoji.triggerCharacters": ["TRIGGERCHAR"]
+}

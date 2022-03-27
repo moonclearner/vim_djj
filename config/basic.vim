@@ -333,6 +333,16 @@ highlight CursorLine   cterm=NONE ctermbg=241 ctermfg=none guibg=NONE guifg=NONE
 highlight CursorColumn cterm=NONE ctermbg=241 ctermfg=none guibg=NONE guifg=NONE
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => clipboard link to system clipboard
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set clipboard=unnamedplus
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => close audio
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set vb t_vb=
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Returns true if paste mode is enabled
