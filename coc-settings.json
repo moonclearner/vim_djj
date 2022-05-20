@@ -7,11 +7,6 @@
       "initializationOptions": {
         "storagePath": "/tmp/intelephense"
       }
-    },
-    "coc-clangd": {
-        "command": "clangd",
-        "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
-        "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
     }
   },
   "markdownlint.config": {
@@ -22,5 +17,5 @@
   "coc.source.emoji.triggerCharacters": [
     "TRIGGERCHAR"
   ],
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd"
 }
