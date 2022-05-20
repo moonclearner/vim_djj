@@ -20,4 +20,6 @@ call plug#begin('~/.vim/plugged')
      Plug 'kana/vim-textobj-syntax'
      Plug 'kana/vim-textobj-function', { 'for':['c', 'cpp', 'vim', 'java'] }
      Plug 'sgur/vim-textobj-parameter'
+     " themes
+     Plug 'morhetz/gruvbox'
 call plug#end()

@@ -346,3 +346,8 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => gruvbox themes
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set bg=dark
+colorscheme gruvbox
