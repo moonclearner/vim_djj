@@ -1,3 +1,20 @@
+let g:coc_global_extensions = [
+\ 'coc-clangd',
+\ 'coc-snippets',
+\ 'coc-json',
+\ 'coc-tsserver',
+\ 'coc-html',
+\ 'coc-css',
+\ 'coc-highlight',
+\ 'coc-dictionary',
+\ 'coc-markdownlint',
+\ 'coc-tag',
+\ 'coc-vetur',
+\ 'coc-word',
+\ 'coc-pairs'
+\ ]
+
+
 call plug#begin('~/.vim/plugged')
      Plug 'preservim/nerdtree'
      " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -8,7 +25,7 @@ call plug#begin('~/.vim/plugged')
      Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
      " completion
      Plug 'honza/vim-snippets'
-     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+     Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install() } }
      " languages syntax
      Plug 'dense-analysis/ale'
      Plug 'posva/vim-vue'

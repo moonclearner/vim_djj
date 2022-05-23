@@ -214,3 +214,17 @@ noremap <Leader>c :<C-U><C-R>=printf("Leaderf! rg -e %s -t cpp -g !*.hpp", expan
 
 `<leader>fp`
 
+
+## Coc server
+
+### c series
+:CocInstall coc-clangd
+
+### python
+:CocInstall coc-pyright
+
+### snippet
+
+1. PlugInstall "honza/vim-snippets"
+2. :CocInstall coc-snippets
+

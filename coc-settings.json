@@ -1,21 +1,26 @@
 {
-  "languageserver": {
-    "intelephense": {
-      "command": "intelephense",
-      "args": ["--stdio"],
-      "filetypes": ["php"],
-      "initializationOptions": {
-        "storagePath": "/tmp/intelephense"
-      }
-    }
-  },
-  "markdownlint.config": {
-    "default": true,
-    "line_length": false
-  },
-  "vetur.ignoreProjectWarning": true,
-  "coc.source.emoji.triggerCharacters": [
-    "TRIGGERCHAR"
-  ],
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd"
+    "languageserver": {
+        "intelephense": {
+            "command": "intelephense",
+            "args": ["--stdio"],
+            "filetypes": ["php"],
+            "initializationOptions": {
+                "storagePath": "/tmp/intelephense"
+            }
+        }
+    },
+    "snippets.extends": {
+        "cpp": ["c"],
+        "javascriptreact": ["javascript"],
+        "typescript": ["javascript"]
+    },
+    "markdownlint.config": {
+        "default": true,
+        "line_length": false
+    },
+    "vetur.ignoreProjectWarning": true,
+    "coc.source.emoji.triggerCharacters": [
+        "TRIGGERCHAR"
+    ],
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd"
 }
