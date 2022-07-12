@@ -1,3 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/daijianjian/workbench/api/ipsv1/dispatch/v3/auth'
 let g:netrw_dirhist_1='/media/daijianjian/新加卷/CODE/5.6.11F00SP03_115018_TDC/bin/nsfocus/bin'

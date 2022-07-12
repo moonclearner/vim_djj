@@ -66,11 +66,12 @@ nnoremap <F6> :Leaderf! rg<Space>-e<Space>
 xnoremap gf :<C-U><C-R>=printf("Leaderf! rg -F -e %s ", leaderf#Rg#visual())<CR>
 noremap go :<C-U>Leaderf! rg --recall<CR>
 
-
 " should use `Leaderf gtags --update` first
 let g:Lf_GtagsAutoGenerate = 0
 let g:Lf_Gtagslabel = 'native-pygments'
+" current root
 let g:Lf_RootMarkers = ['.git', '.hg', '.svn', '.root', '.project']
+let g:Lf_WorkingDirectoryMode = 'c'
 noremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump", expand("<cword>"))<CR><CR>
 noremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>
 noremap <leader>fo :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>
@@ -82,6 +83,11 @@ let g:Lf_ShowDevIcons = 0
 
 "default up or down are used to recall last next, instead of c-k cj
 " let g:Lf_CommandMap = {'<C-K>': ['<Up>'], '<C-J>': ['<Down>']}
+
+let g:Lf_WildIgnore = {
+    \ 'dir': ['.svn','.git','.hg'],
+    \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
+\}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
@@ -102,46 +108,6 @@ nmap <F7> :NERDTreeToggle<CR>
 " => Vim airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline#extensions#tabline#formatter = 'default'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Ale
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ale_sign_error = '✗'
-let g:ale_sign_warning = '►'
-let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
-
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-
-" disable highlight
-"let g:ale_set_highlights = 0
-
-let g:airline#extensions#ale#enabled = 1
-
-" ale lint check
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
-" You can disable this option too
-" if you don't want linters to run on opening a file
-let g:ale_lint_on_enter = 0
-
-" short key
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-
-"vue 
-let g:ale_linter_aliases = {'vue': ['vue', 'javascript']}
-let g:ale_linters = {'vue': ['eslint', 'vls']}
-
-"python
-call ale#Set('python_flake8_options', '--config=$HOME/.vim/config/flake8.conf')
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => clang_complete
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- " path to directory where library can be found
- let g:clang_library_path='/usr/lib/llvm-10/lib/libclang.so.1'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => nerdcommenter
@@ -347,7 +313,6 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " snippet  use <cr> to completion
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => gruvbox themes

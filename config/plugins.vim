@@ -11,7 +11,8 @@ let g:coc_global_extensions = [
 \ 'coc-tag',
 \ 'coc-vetur',
 \ 'coc-word',
-\ 'coc-pairs'
+\ 'coc-eslint',
+\ 'coc-pyright',
 \ ]
 
 
@@ -27,7 +28,7 @@ call plug#begin('~/.vim/plugged')
      Plug 'honza/vim-snippets'
      Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install() } }
      " languages syntax
-     Plug 'dense-analysis/ale'
+     "Plug 'dense-analysis/ale'
      Plug 'posva/vim-vue'
      Plug 'plasticboy/vim-markdown'
      Plug 'preservim/nerdcommenter'
