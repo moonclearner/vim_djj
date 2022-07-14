@@ -85,7 +85,7 @@ let g:Lf_ShowDevIcons = 0
 " let g:Lf_CommandMap = {'<C-K>': ['<Up>'], '<C-J>': ['<Down>']}
 
 let g:Lf_WildIgnore = {
-    \ 'dir': ['.svn','.git','.hg'],
+    \ 'dir': ['.svn','.git','.hg', 'node_modules'],
     \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
 \}
 
